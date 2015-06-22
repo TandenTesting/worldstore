@@ -1,0 +1,14 @@
+Area:	Product catalog
+Sub function:	Sort Order
+
+Precondition:
+
+
+
+Test 1: 
+	Verify that the Sort order funtionality works as expected using Price as the ordering condition.
+	
+	
+Test 2:
+	Verify that the SOrt order functionality behaves in a sane way when an invalid sort order option in sent to the server.
+	

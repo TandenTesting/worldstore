@@ -1,0 +1,41 @@
+Test environment requires;
+	Posix compliant file structure
+	Python 2.7.6
+	Selenium 		- sudo pip install selenium
+	Firefox
+
+Notes:
+	make sure the python selenium binding are up to date (there is a known problem in older versions and firefox.)
+
+	Automation tests are kept in files begining 'check_*'.  These can be run as directly i.e. ./check_plp_sortorder.py
+		or
+	execute ./functional_checks.py to run automated tests against site. 
+	The test methods that are to be run are kept in the array run_these, in the functional_checks.py tests file.
+
+	Unit tests for this code's functional tests are found in the 'test' directory
+
+	the directory "_evidence" holds all the execution evidences for an execution. 
+		The log file will be appended to on each execution
+		the screen shot files will be overwritten on each execution
+
+Issues:
+	Only positive test cases have been implemented for the checking of calculation v quantity and sort order test.
+	This is because these tests are controlled by fixed selection choices.
+	During investigation, it has been seen that the sort order can be caused to fail by issuing a server 
+	request with a sort order out side the normal range.
+	http://www.modern.co.uk/c/Modern_Plain_Rugs.htm?sorts=9
+	Doing so returns a body response: "AN error has occurred... contact support DB Error 176QX".
+	Also the response code was set to 200.  It is not clear that this is correct, due to lack of requirements.
+	I would expect some sort of 4xx response.
+
+TO-DO
+	* Fully data drive the test cases, _data directory with sqlite db
+	* find a better random email algorithm
+	* Refactor the test cases, as there is a lot of code repetition.
+	* Add function to extract Doc strings for test case documentation.
+	* Post execution collection and archive of evidences. (maybe part of makefile?)
+	* Include a "makefile" to clean up directory structure.
+	* Add execution "think_time" to better represnt user activity
+	* Refactor test exection list to a config file (so I don't have to edit program source files)
+	
+	

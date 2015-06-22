@@ -1,0 +1,13 @@
+{
+	"environment" : "PROD",
+	"logfilename" : "worldstore",
+	"thinktime" : {
+		"state" : "on",
+		"delay" : 2,
+		"random" : {
+			"state" : "on",
+			"min" : 0.1,
+			"max" : 0.25
+		}
+	}
+}
