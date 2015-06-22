@@ -33,9 +33,8 @@ TO-DO
 	* find a better random email algorithm
 	* Refactor the test cases, as there is a lot of code repetition.
 	* Add function to extract Doc strings for test case documentation.
-	* Post execution collection and archive of evidences. (maybe part of makefile?)
-	* Include a "makefile" to clean up directory structure.
 	* Add execution "think_time" to better represnt user activity
 	* Refactor test exection list to a config file (so I don't have to edit program source files)
+	* Check _evidences is present before execution starts.
 	
 	
