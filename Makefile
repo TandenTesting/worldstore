@@ -1,3 +1,8 @@
+.DEFAULT_GOAL := help
+	
+help:
+	@echo  "make [clean | backup]"
+
 clean:
 	find . -type f -name '.DS_Store' -delete
 	find . -type f -name '*pyc' -delete
@@ -8,6 +13,5 @@ clean:
 
 backup:
 	find . -type f -name '.DS_Store' -delete
-	tar -czvf automation_evidences_`date +%Y%m%d_%H%M%S`.tgz _evidence``
-	
+	tar -czvf automation_evidences_`date +%Y%m%d_%H%M%S`.tgz _evidence
 
