@@ -18,6 +18,27 @@ Notes:
 		The log file will be appended to on each execution
 		the screen shot files will be overwritten on each execution
 
+Install check list:
+	Install a Ubuntu 10.4.2 VM
+	Log in to VM and run the following
+		$ sudo apt-get install python-pip
+		$ sudo pip install selenium
+		$ sudo apt-get install git
+		$ mkdir ~/Development
+		$ cd ~/Development
+		$ git clone https://github.com/TandenTesting/worldstore.git
+		$ cd worldstore/
+		$ mkdir _evidence
+
+Running tests:	
+	All defined tests
+		$ ./functional_checks.py
+	or tests in defined scenarios
+		$ ./check_plp_sortorder.py
+		$ ./check_newsletter_email_validation.py
+		$ ./check_basket_calc_price_v_qty.py
+
+
 Issues:
 	Only positive test cases have been implemented for the checking of calculation v quantity and sort order test.
 	This is because these tests are controlled by fixed selection choices.
