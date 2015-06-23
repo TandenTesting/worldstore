@@ -6,6 +6,7 @@ import json
 import time
 
 from support import execution
+from support import config
 from support.generate import  id_generator
 
 from selenium import webdriver
@@ -95,6 +96,6 @@ class Test_Basket_Price_and_Qty(unittest.TestCase):
 
 if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s: %(levelname)s - %(message)s', 
-                        filename='_evidence/' + lconfig.logfile('_config/execution.json') + '.log',
+                        filename='_evidence/' + config.logfile('_config/execution.json') + '.log',
                         level=logging.DEBUG ) 
     unittest.main()
